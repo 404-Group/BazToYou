@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BazToGo.MainPage">
+
+
+    <Grid RowSpacing="8"
+          ColumnSpacing="8"
+          Padding="10"
+          RowDefinitions="175, 175, 125"
+          ColumnDefinitions="*">
+        <BoxView Color="Red" >
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ProfileTap"/>
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Label Text="My Profile"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" >
+        </Label>
+        <BoxView Grid.Row="1"
+                 Grid.Column="1"
+                 Color="Green" >
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AvailableTap"
+                NumberOfTapsRequired="1" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Label   Grid.Row="2"
+                 Grid.Column="1"
+               Text="Available Orders"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+        <BoxView Grid.Row="1"
+                 Color="Blue" >
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="CurrentTap"
+                NumberOfTapsRequired="1" />
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Label Grid.Row="3"
+               Grid.Column="1"
+               Text="Current Order"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </Grid>
+
+
+
+</ContentPage>
