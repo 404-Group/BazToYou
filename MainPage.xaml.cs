@@ -1,13 +1,7 @@
 ﻿namespace BazToYou
 {
-    
-
     public partial class MainPage : ContentPage
     {
-        private void InitializeComponent()
-		{
-			global::Microsoft.Maui.Controls.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-		}
         public MainPage()
         {
             InitializeComponent();
